@@ -1,5 +1,5 @@
 export default function AboutUsPage() {
     return (
-        <div></div>
+        <div>su di noi</div>
     )
 }

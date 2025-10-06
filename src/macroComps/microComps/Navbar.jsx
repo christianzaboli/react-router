@@ -4,9 +4,15 @@ export default function Navbar() {
     return (
         <nav>
             <ul>
-                <NavLink to='/'>Home page</NavLink>
-                <Link to='/prodotti'>Prodotti</Link>
-                <Link to='/contatti'>Contatti</Link>
+                <li>
+                    <NavLink to='/'>Home page</NavLink>
+                </li>
+                <li>
+                    <Link to='/prodotti'>Prodotti</Link>
+                </li>
+                <li>
+                    <Link to='/contatti'>Contatti</Link>
+                </li>
             </ul>
         </nav>
     )
