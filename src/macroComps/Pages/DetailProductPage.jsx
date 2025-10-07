@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 
 export default function DetailProductPage() {
     const { id } = useParams()
+    const navigate = useNavigate();
     const [product, setProduct] = useState({})
 
     useEffect(() => {
         axios.get(`https://fakestoreapi.com/products/${id}`)
             .then(res => setProduct(res.data))
-            .catch(error => console.log(error))
+            .catch(error => navigate(-1))
 
     }, []);
 

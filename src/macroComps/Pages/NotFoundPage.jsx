@@ -1,0 +1,6 @@
+export default function NotFoundPage() {
+
+    return (
+        <p>404 page not found</p>
+    )
+}
