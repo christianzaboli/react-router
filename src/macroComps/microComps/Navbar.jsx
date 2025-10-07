@@ -8,10 +8,10 @@ export default function Navbar() {
                     <NavLink to='/'>Home page</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/prodotti'>Prodotti</NavLink>
+                    <NavLink to='/products'>Prodotti</NavLink>
                 </li>
                 <li>
-                    <NavLink to='/contatti'>Contatti</NavLink>
+                    <NavLink to='/contacts'>Contatti</NavLink>
                 </li>
             </ul>
         </nav>
