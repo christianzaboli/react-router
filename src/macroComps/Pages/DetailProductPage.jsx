@@ -5,14 +5,14 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 export default function DetailProductPage() {
     const { id } = useParams()
     const navigate = useNavigate();
-    const [product, setProduct] = useState({})
+    const [product, setProduct] = useState()
 
     useEffect(() => {
         axios.get(`https://fakestoreapi.com/products/${id}`)
             .then(res => setProduct(res.data))
-            .catch(error => navigate(-1))
+            .catch(() => navigate('/products'))
 
-    }, []);
+    }, [id, navigate]);
 
     return (
         <>
@@ -29,6 +29,8 @@ export default function DetailProductPage() {
             </div>
             <Link to='/products'>Torna a tutti i prodotti</Link>
         </>
+
+
     )
 
 }
