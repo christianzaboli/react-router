@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 
+import ProductCard from "../microComps/ProductCard"
 export default function ProductsPage() {
     const linkApi = 'https://fakestoreapi.com/products'
     const [products, setProducts] = useState([])
@@ -16,15 +17,8 @@ export default function ProductsPage() {
         <>
             <div className="container">
                 <h1>I nostri prodotti</h1>
-                <div className="card-container">
-
-                    {products.map((product) => (
-                        <div className="card" key={product.id}>
-                            <img src={product.image} alt={product.title} />
-                            <h3>{product.title}</h3>
-                            <p>{product.price}<span>{product.category}</span></p>
-                        </div>
-                    ))}
+                <div className="row">
+                    {products.map(product => (ProductCard(product)))}
                 </div>
             </div>
         </>

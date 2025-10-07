@@ -3,7 +3,7 @@ export default function MyHeader() {
 
     return (
         <header>
-            <Navbar/>
+            <Navbar />
         </header>
     )
 }

@@ -8,6 +8,7 @@ import DefaultLayout from './macroComps/Layout/DefaultLayout'
 import AboutUsPage from './macroComps/Pages/AboutUsPage'
 import HomePage from './macroComps/Pages/HomePage'
 import ProductsPage from './macroComps/Pages/ProductsPage'
+import DetailProductPage from './macroComps/Pages/DetailProductPage'
 
 export default function App() {
 
@@ -15,9 +16,13 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<DefaultLayout />}>
-          <Route index element={<HomePage/>}/>
-          <Route path='/contatti' element={<AboutUsPage/>}/>
-          <Route path='/prodotti' element={<ProductsPage/>}/>
+          <Route index element={<HomePage />} />
+          <Route path='/contacts' element={<AboutUsPage />} />
+          <Route path='/products'>
+            <Route path='/' element={<ProductsPage />} />
+
+            <Route path='/:id' element={<DetailProductPage />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
