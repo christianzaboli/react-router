@@ -5,9 +5,11 @@ import MyFooter from "../MyFooter"
 export default function DefaultLayout() {
     return (
         <>
-        <MyHeader/>
-        <Outlet/>
-        <MyFooter/>
+            <MyHeader />
+            <main>
+                <Outlet />
+            </main>
+            <MyFooter />
         </>
     )
 }

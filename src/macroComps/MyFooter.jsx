@@ -1,8 +1,8 @@
-export default function MyFooter () {
+export default function MyFooter() {
 
     return (
-        <header>
-            
-        </header>
+        <footer>
+
+        </footer>
     )
 }
